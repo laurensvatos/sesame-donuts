@@ -1,59 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import url('https://use.typekit.net/ygy1kje.css');
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    margin: 0;
-    background-color: #FDEBF4;
+body {
+  margin: 0;
+  background-color: #fdebf4;
+}
+body.homepage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/pink-triangle.png), url(../images/donut-display.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header .logo {
+  width: 180px;
+  padding: 40px;
+}
+body.homepage main {
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+}
+body.homepage h1 {
+  text-transform: uppercase;
+  color: white;
+}
+.navigation {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #7d3520;
+  text-decoration: none;
+}
+.navigation a {
+  display: inline-block;
+  margin: 20px 26px;
+  color: #fff;
+  text-decoration: none;
+}
+.navigation a:hover {
+  border-bottom: 4px dotted white;
 }
 
-.header .logo{
-    width: 100%;
-    height: 20%;
+.locations-page .page-title {
+  font-family: hobo-std, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #7d3520;
+  text-align: center;
 }
-.navigation{
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    color: #7D3520;
-    text-decoration: none;
+.locations-page .addresses-left .addresses-right {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1;
 }
-
-.locations-page .page-title{
-    font-family: hobo-std, sans-serif;
-    font-size: 48px;
-    font-weight: 400;
-    color: #7D3520;
-    text-align: center;
+.name {
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #7d3520;
 }
-.locations-page .addresses-left .addresses-right{
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1;
-}
-.name{
-    font-size: 40px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    color: #7D3520;
-}
-.content{
-    font-size: 24px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    color: #7D3520;
+.content {
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #7d3520;
 }
 
-footer{
-    background-color: #E50278;
-    width:100vw;
-    height: 150px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    text-align: center;
-    color: white;
+footer {
+  background-color: #e50278;
+  width: 100vw;
+  height: 150px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+}
+.button {
+  display: inline-block;
+  background: #e73992;
+  color: white;
+  padding: 12px 20px;
+}
+@media screen and (max-width: 520px) {
+  .button {
+    color: brown;
+    background: #850fe0;
+  }
 }
