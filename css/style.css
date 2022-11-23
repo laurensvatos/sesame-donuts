@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://use.typekit.net/ygy1kje.css');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #FDEBF4;
+}
+
+.header .logo{
+    width: 100%;
+    height: 20%;
+}
+.navigation{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #7D3520;
+    text-decoration: none;
+}
+
+.locations-page .page-title{
+    font-family: hobo-std, sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #7D3520;
+    text-align: center;
+}
+.locations-page .addresses-left .addresses-right{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+}
+.name{
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #7D3520;
+}
+.content{
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #7D3520;
+}
+
+footer{
+    background-color: #E50278;
+    width:100vw;
+    height: 150px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
