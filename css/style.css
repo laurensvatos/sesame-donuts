@@ -28,7 +28,7 @@ header {
 }
 header .logo {
   width: 180px;
-  padding: 40px;
+  padding: 20px;
 }
 body.homepage main {
   position: absolute;
@@ -38,6 +38,11 @@ body.homepage main {
 body.homepage h1 {
   text-transform: uppercase;
   color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600; 
+  font-size: 80px; 
+  line-height: 79.75px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .navigation {
   font-size: 20px;
@@ -53,7 +58,11 @@ body.homepage h1 {
   text-decoration: none;
 }
 .navigation a:hover {
-  border-bottom: 4px dotted white;
+  border-bottom: 3px dotted white;
+}
+
+.navigation-mobile{
+  display:none;
 }
 
 .locations-page .page-title {
@@ -94,13 +103,23 @@ footer {
 }
 .button {
   display: inline-block;
-  background: #e73992;
+  background: #E50278;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 200px;
   color: white;
   padding: 12px 20px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center; 
 }
-@media screen and (max-width: 520px) {
+
+/*start of mobile menu*/
+@media screen and (max-width: 768px) {
   .button {
-    color: brown;
-    background: #850fe0;
+    color: #7d3520;
+    background: white;
   }
 }
