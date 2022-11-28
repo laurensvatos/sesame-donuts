@@ -11,25 +11,31 @@
   <body class="homepage">
     <header>
       <div class="logo">
-        <a href="index.html"><img src="images/sesamelogo.png" /></a>
+        <a href="index.html"><img src="images/sesamelogo.png"></a>
       </div>
-      <div class="navigation">
-        <a href="page02.html">MENU</a>
-        <a href="page01.html">LOCATIONS</a>
-        <a href="#">ABOUT</a>
-        <a href="#">JOBS</a>
-      </div>
-      <div class="navigation-mobile">
-        <a href="page02.html">MENU</a>
-        <a href="page01.html">LOCATIONS</a>
-        <a href="#">ABOUT</a>
-        <a href="#">JOBS</a>
-      </div>
+        <nav class="nav">
+          <div class="icon">
+            <div class="hamburger"></div>
+          </div>
+              <div class="navigation-mobile" style="display: none">
+                <a href="page02.html">MENU</a>
+                <a href="page01.html">LOCATIONS</a>
+                <a href="#">ABOUT</a>
+                <a href="#">JOBS</a>
+              </div>
+        </nav>
+              <div class="navigation-desktop">
+                <a href="page02.html">MENU</a>
+                <a href="page01.html">LOCATIONS</a>
+                <a href="#">ABOUT</a>
+                <a href="#">JOBS</a>
+              </div>
     </header>
     <main>
       <h1>Made to Make<br>Your Day</h1>
       <a href="page02.html" class="button">DONUTS!</a>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
