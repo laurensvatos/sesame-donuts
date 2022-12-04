@@ -32,7 +32,7 @@ header .logo {
   position: fixed;
 }
 .navigation-desktop {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
@@ -43,9 +43,11 @@ header .logo {
   text-decoration: none;
 }
 .navigation-desktop a:hover {
-  border-bottom: 3px dotted white;
+  border-bottom: 3px solid white;
 }
-
+.navigation-mobile{
+  display: none;
+}
 body.homepage main {
   position: absolute;
   bottom: 100px;
@@ -74,31 +76,59 @@ body.homepage h1 {
   font-size: 24px;
   text-align: center; 
 }
+.locations-page .navigation-desktop a:hover{
+  border-bottom: 3px solid #7d3520;
+}
+.locations-page .navigation-desktop a {
+  color:#7d3520;
+}
 .locations-page .page-title {
   font-family: hobo-std, sans-serif;
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 400;
   color: #7d3520;
   text-align: center;
+  padding-top: 50px;
 }
-.locations-page .addresses-left .addresses-right {
-  text-align: center;
+.locations-page main{
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  flex: 1;
+  place-content: center;
+  padding-bottom: 50px;
+  padding-right: 30px;
 }
 .name {
-  font-size: 40px;
+  font-size: 20px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   color: #7d3520;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 .content {
-  font-size: 24px;
+  font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #7d3520;
+  padding-bottom: 20px;
+}
+
+.addresses-right{
+  border-left: 3px solid #7D3520;
+  text-align: center;
+  padding-left: 80px;
+}
+
+.addresses-left{
+  text-align: center;
+  padding-right: 80px;
+}
+
+.menu-page .navigation-desktop a:hover{
+  border-bottom: 3px solid #7d3520;
+}
+.menu-page .navigation-desktop a {
+  color:#7d3520;
 }
 
 footer {
@@ -106,17 +136,30 @@ footer {
   width: 100vw;
   height: 150px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   color: white;
+  padding-top: 12px;
+}
+footer ul{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
 }
 
-
+footer ul a {
+  color: white;
+}
 /*start of mobile menu*/
 @media screen and (max-width: 768px) {
   .button {
     color: #7d3520;
     background: white;
+  }
+  body.homepage main {
+    left: 50px;
+
   }
   body.homepage h1{
     font-size: 60px;
@@ -145,7 +188,7 @@ footer {
     width: 40px;
     height: 4px;
     line-height: 70px;
-    background: #e50278;
+    background: white;
     border-radius: 5px;
     position: absolute;
     top: 50%;
@@ -161,7 +204,7 @@ footer {
     position: absolute;
     width: 40px;
     height: 4px;
-    background: #e50278;
+    background: white;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
@@ -194,10 +237,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
   }
   .navigation-mobile a {
     clear: right;
@@ -205,8 +244,24 @@ footer {
     color: white;
     height: 70px;
     line-height: 70px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-color: #e50278;
   }
   .navigation-desktop {
     display: none;
+  }
+  .addresses-right {
+    border-left: none;
+    padding: 0;
+  }
+  .addresses-left{
+    padding: 0;
+  }
+  main{
+    display: flex;
+    flex-direction: column;
   }
 }

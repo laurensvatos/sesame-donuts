@@ -1,3 +1,5 @@
+"use strict"
+
 function toggleIcon() {
     $(".icon").on("click", function() {
         $(".icon").toggleClass("active")
