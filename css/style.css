@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import url('https://use.typekit.net/ygy1kje.css');
+@import url("hover-min.css");
 
 * {
   box-sizing: border-box;
@@ -76,6 +77,49 @@ body.homepage h1 {
   font-size: 24px;
   text-align: center; 
 }
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: #7d3520;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 .locations-page .navigation-desktop a:hover{
   border-bottom: 3px solid #7d3520;
 }
@@ -99,13 +143,14 @@ body.homepage h1 {
   padding-bottom: 50px;
   padding-right: 30px;
 }
-.name {
+.name a {
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   color: #7d3520;
   line-height: 20px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .content {
   font-size: 16px;
@@ -133,9 +178,7 @@ body.homepage h1 {
   color:#7d3520;
 }
 .menu-page main{
-  display: flex;
-  flex-wrap: wrap;
-  width: 70%;
+  width: 60%;
   margin: auto;
   color: #e50278;
   font-family: 'Open Sans', sans-serif;
@@ -150,10 +193,12 @@ body.homepage h1 {
   text-align: center;
   font-size: 20px;
   display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
 }
-
+.menu-page h1{
+  transform: rotate(180deg);
+  writing-mode: tb-rl;
+  font-family: hobo-std, sans-serif;
+}
 footer {
   background-color: #e50278;
   width: 100vw;
@@ -179,6 +224,9 @@ footer ul a {
 }
 /*start of mobile menu*/
 @media screen and (max-width: 768px) {
+  header .logo{
+    width: 125px;
+  }
   .button {
     color: #7d3520;
     background: white;
@@ -196,6 +244,7 @@ footer ul a {
   background-repeat: no-repeat;
   background-size: cover;
   }
+  
   .nav {
     display: block;
     position: fixed;
