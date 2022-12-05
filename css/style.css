@@ -81,6 +81,8 @@ body.homepage h1 {
 }
 .locations-page .navigation-desktop a {
   color:#7d3520;
+  display: inline-block;
+  margin: 20px 26px;
 }
 .locations-page .page-title {
   font-family: hobo-std, sans-serif;
@@ -116,7 +118,7 @@ body.homepage h1 {
 .addresses-right{
   border-left: 3px solid #7D3520;
   text-align: center;
-  padding-left: 80px;
+  padding-left: 90px;
 }
 
 .addresses-left{
@@ -130,11 +132,32 @@ body.homepage h1 {
 .menu-page .navigation-desktop a {
   color:#7d3520;
 }
+.menu-page main{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+  color: #e50278;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  place-content: center;
+}
+.classic, .fancy, .combo {
+  border: 3px solid #e50278;
+  color: #e50278;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
 
 footer {
   background-color: #e50278;
   width: 100vw;
-  height: 150px;
+  height: 100px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   text-align: center;
@@ -146,6 +169,9 @@ footer ul{
   display: flex;
   flex-wrap: wrap;
   place-content: center;
+  justify-content: space-between;
+  padding-left: 40%;
+  padding-right: 40%;
 }
 
 footer ul a {
@@ -159,10 +185,16 @@ footer ul a {
   }
   body.homepage main {
     left: 50px;
-
   }
   body.homepage h1{
     font-size: 60px;
+  }
+  body.homepage{
+  background-image: url(../images/pink-rectangle.png), url(../images/donut-display.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
   }
   .nav {
     display: block;
@@ -262,6 +294,12 @@ footer ul a {
   }
   main{
     display: flex;
+    flex-direction: column;
+  }
+  footer{
+    height: 150px;
+  }
+  footer ul{
     flex-direction: column;
   }
 }
