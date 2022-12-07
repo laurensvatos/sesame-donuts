@@ -205,22 +205,29 @@ body.homepage h1 {
   color: #e50278;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   display: flex;
   flex-wrap: wrap;
+  margin-block-start: 50px;
 }
-.classic .card {
+.classic .card,
+.combo .card {
+  flex: 33%;
+}
+.fancy .card{
+  padding-inline: 20px;
+  padding-top: 20px;
   flex: 33%;
 }
 .menu-page main {
   display: grid;
   grid-template-columns: 15% 85%;
-  justify-items: top;
 }
 .menu-page h1 {
   /* transform: rotate(180deg); */
   writing-mode: vertical-lr;
   font-family: hobo-std, sans-serif;
+  padding-inline-start: 50px;
 }
 .menu-page p {
   text-align: center;
