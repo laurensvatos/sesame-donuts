@@ -196,6 +196,7 @@ body.homepage h1 {
   font-family: 'Open Sans', sans-serif;
   padding-bottom: 100px;
   padding-top: 100px;
+  padding-right: 60px;
   place-content: center;
 }
 .classic,
@@ -219,6 +220,12 @@ body.homepage h1 {
   padding-top: 20px;
   flex: 33%;
 }
+
+.donut:hover {
+  transform: scale(1.5);
+  transform-origin: bottom;
+}
+
 .menu-page main {
   display: grid;
   grid-template-columns: 15% 85%;
@@ -228,6 +235,12 @@ body.homepage h1 {
   writing-mode: vertical-lr;
   font-family: hobo-std, sans-serif;
   padding-inline-start: 50px;
+}
+.label{
+  margin-top: -20px;
+}
+.donut{
+  padding-bottom: 0%;
 }
 .menu-page p {
   text-align: center;
@@ -258,7 +271,8 @@ footer ul a {
 /*start of mobile menu*/
 @media screen and (max-width: 768px) {
   header .logo {
-    width: 125px;
+    width: 100px;
+    padding: 10px;
   }
   .button {
     color: #7d3520;
@@ -268,7 +282,8 @@ footer ul a {
     left: 50px;
   }
   body.homepage h1 {
-    font-size: 60px;
+    font-size: 50px;
+    line-height: 60px;
   }
   body.homepage {
     background-image: url(../images/donut-display.jpg);
@@ -302,7 +317,7 @@ footer ul a {
     width: 40px;
     height: 4px;
     line-height: 70px;
-    background: #7d3520;
+    background: #e50278;
     border-radius: 5px;
     position: absolute;
     top: 50%;
@@ -318,7 +333,7 @@ footer ul a {
     position: absolute;
     width: 40px;
     height: 4px;
-    background: #7d3520;
+    background: #e50278;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
@@ -358,14 +373,13 @@ footer ul a {
   .navigation-mobile a {
     clear: right;
     text-decoration: none;
-    color: white;
-    height: 70px;
-    line-height: 70px;
+    color: #e50278;
+    height: 150px;
     text-align: center;
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    background-color: #e50278;
+    background-color: #fdebf4;
   }
   .navigation-desktop {
     display: none;
@@ -382,9 +396,11 @@ footer ul a {
     flex-direction: column;
   }
   .menu-page main {
-    width: 80%;
+    width: 90%;
   }
-  .classic .card {
+  .classic .card,
+  .fancy .card,
+  .combo .card {
     flex: 100%;
   }
   footer {
